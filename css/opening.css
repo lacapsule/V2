@@ -1,0 +1,259 @@
+    @import 'reset.css';
+    @import 'header.css';
+    @import 'animations.css';
+    @import 'footer.css';
+    @font-face {
+        font-family: "Signika";
+        src: url('../fonts/Signika-Bold.ttf');
+    }
+    
+    body {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 120vh;
+        overflow: hidden;
+        z-index: 0;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        text-align: center;
+        font-family: Signika, verdana, sans-sérif;
+        color: rgba(0, 0, 0, 0.95);
+        line-height: 1.2em;
+    }
+    
+    h1 {
+        font-size: 300%;
+        background: -o-repeating-linear-gradient(135deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+        background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+        background-size: 600vw 600vw;
+        -webkit-animation: "color" 15s infinite linear forwards, "intro" 60s infinite linear forwards;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    
+    h2#fleche {
+        font-size: 6em;
+        animation: 1.5s ease-in-out fleche infinite;
+        opacity: 100%;
+    }
+    
+    h2 {
+        font-size: 250%;
+    }
+    
+    h3 {
+        font-size: 200%;
+    }
+    
+    p {
+        text-align: justify;
+        font-size: 200%;
+        padding: 0 10% 10% 10%;
+    }
+    /**********************************************************
+************************ CONTAINER ************************
+**********************************************************/
+    
+    #container {
+        display: grid;
+        grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6";
+        grid-template-rows: 100% 100% 100% 100% 100% 100%;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-items: center;
+        align-content: space-between;
+        justify-content: space-around;
+        position: relative;
+        overflow-x: hidden;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+        z-index: 0;
+    }
+    
+    #container div {
+        display: block;
+        position: relative;
+        left: 0;
+        top: -10%;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .item1 {
+        grid-area: item1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding-top: 5%;
+        background: linear-gradient(#1a9445, #1ab3a9);
+    }
+    
+    .item2 {
+        grid-area: item2;
+        padding: 0 20% 0 20%;
+        background: linear-gradient(#190a50, #30098b);
+    }
+    
+    .item3 {
+        grid-area: item3;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#2ca0d6, #1a9445);
+    }
+    
+    .item4 {
+        grid-area: item4;
+        padding: 0 20% 20% 20%;
+        background-color: #2479e9;
+    }
+    
+    .item5 {
+        grid-area: item5;
+        padding: 0 20% 20% 20%;
+        background: linear-gradient(#000000, #585858);
+    }
+    
+    .item6 {
+        grid-area: item6;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            text-align: center;
+            font-family: Signika, verdana, sans-sérif;
+            color: rgba(0, 0, 0, 0.95);
+            line-height: 1.2em;
+        }
+        h1 {
+            font-size: 200%;
+            background: -o-repeating-linear-gradient(135deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+            background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+            background-size: 600vw 600vw;
+            -webkit-animation: "color" 15s infinite linear forwards, "intro" 60s infinite linear forwards;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        h2 {
+            font-size: 180%;
+        }
+        h2#fleche {
+            font-size: 3em;
+            animation: 3s ease-in-out fleche infinite;
+            opacity: 100%;
+        }
+        h3 {
+            font-size: 120%;
+        }
+        p {
+            text-align: justify;
+            font-size: 120%;
+        }
+        #container {
+            display: grid;
+            grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6";
+            grid-template-rows: 100% 100% 100% 100% 100% 100%;
+            grid-template-columns: 100%;
+            align-items: center;
+            justify-items: center;
+            align-content: space-between;
+            justify-content: space-around;
+            position: relative;
+            overflow-x: hidden;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        div {
+            display: block;
+            position: relative;
+            left: 0;
+            top: -10%;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            justify-content: center;
+        }
+        .item1 {
+            grid-area: item1;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            background: linear-gradient(#1a9445, #1ab3a9);
+        }
+        .item2 {
+            grid-area: item2;
+            padding: 0 20% 0 20%;
+            background: linear-gradient(#190a50, #30098b);
+        }
+        .item3 {
+            grid-area: item3;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#2ca0d6, #1a9445);
+        }
+        .item4 {
+            grid-area: item4;
+            padding: 0 20% 20% 20%;
+            height: auto;
+            background-color: #2479e9;
+        }
+        .item5 {
+            grid-area: item5;
+            padding: 0 20% 20% 20%;
+            background: linear-gradient(#000000, #585858);
+        }
+        .item6 {
+            grid-area: item6;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+    }
+    
+    @media screen and (max-height: 650px) {
+        img.map {
+            padding: 2% 20% 12% 20%;
+            height: 90%;
+        }
+    }

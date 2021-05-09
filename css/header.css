@@ -1,0 +1,124 @@
+:root {
+    --une: #30aee9;
+    --deux: #e9ae30;
+    --trois: #4d7ebc;
+    --quatre: #1a9445;
+    --cinq: rgb(63, 63, 63);
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #fffefe, 50%, transparent);
+    z-index: 1;
+}
+
+header:hover {
+    background-color: white;
+}
+
+img:not(#contact, #burger) {
+    transition: 0.5s ease-in-out;
+    margin-left: 1em;
+    z-index: 6;
+}
+
+img:hover:not(#partenaires) {
+    opacity: 90%;
+    transform: scale(1.05);
+    transition: ease-in-out 0.5s;
+}
+
+img.capsule {
+    position: relative;
+    width: auto;
+    height: 2.6em;
+    padding-top: 2%;
+    animation: 20s logocapsule infinite;
+    z-index: 1;
+}
+
+img.ulamir {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: auto;
+    height: 2.6em;
+    animation: 20s logoulamir infinite;
+    z-index: 2;
+}
+
+div.menu_container {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+header>div a {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 80%;
+    font-family: signika, verdana, sans-sérif;
+    color: white;
+    transition: 0.5s ease;
+    opacity: 99%;
+    z-index: 5;
+}
+
+a.home {
+    background-color: var(--une);
+    animation: 10s ease-in-out bgcolor infinite;
+}
+
+a#contact {
+    background-color: var(--deux);
+    animation: 11s ease-in-out bgcolor infinite;
+}
+
+a.lien1 {
+    background-color: var(--trois);
+    animation: 12s ease-in-out bgcolor infinite;
+}
+
+a.lien2 {
+    background-color: var(--une);
+    animation: 13s ease-in-out bgcolor infinite;
+}
+
+a.lien3 {
+    background-color: var(--quatre);
+    animation: 14s ease-in-out bgcolor infinite;
+}
+
+.home:hover,
+#contact:hover,
+.lien1:hover,
+.lien2:hover,
+.lien3:hover {
+    background-color: var(--cinq);
+    color: rgb(255, 255, 255);
+    background-blend-mode: difference;
+    opacity: 100%;
+}

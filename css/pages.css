@@ -1,0 +1,498 @@
+@import 'reset.css';
+@import 'animations.css';
+@import 'header.css';
+@font-face {
+    font-family: "Signika";
+    src: url('../fonts/Signika-Bold.ttf');
+}
+
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    position: relative;
+    overflow-x: hidden;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: signika, filson, verdana, sans-sérif;
+    z-index: 0;
+}
+
+header {
+    top: 0;
+    height: 8%;
+}
+
+#bandeau_git {
+    top: 95%;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+----------------------------------------- TOUTES LES PAGES -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 8vh;
+    width: 100%;
+    height: 100vh;
+    padding-top: 7.5%;
+    text-align: justify;
+    z-index: 0;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800%;
+    height: auto;
+    padding: 0 10% 4% 10%;
+    background: linear-gradient(#1a9445, #1ab3a9);
+}
+
+.text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 56%;
+    height: auto;
+    padding: 2.5% 22% 2% 22%;
+    background: linear-gradient(#ffffff, #ecfffe);
+}
+
+.text:last-child {
+    padding-bottom: 10%;
+}
+
+.photo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    align-content: center;
+    justify-items: center;
+    justify-self: center;
+    width: 60%;
+    height: auto;
+    padding: 2% 20% 2% 20%;
+    background: linear-gradient(#2ca0d6, #1a9445);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+--------------------------------------------------- TEXTE --------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+    align-self: flex-start;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: 2.5em;
+    background: -o-repeating-linear-gradient(135deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-animation: "color" 10s infinite linear forwards;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 1.5em;
+}
+
+h3 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    padding-bottom: 2%;
+}
+
+h3~a {
+    color: rgb(0, 0, 0);
+    font-size: 2.2em;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    line-height: 1.3em;
+    padding: 1% 2% 1% 2%;
+    margin: 1%;
+    background: linear-gradient(#000000, #575555);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-------------------------------------------- PAGE PARTENAIRES ----------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#partenaires {
+    display: block;
+    position: center;
+    padding-top: 5vh;
+    animation: 35s ease slideTree backwards;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-------------------------------------------- PAGE MAINTENANCE ----------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+div#maintenance {
+    grid-area: intro;
+    position: relative;
+    left: 2vw;
+    top: 10vh;
+    right: 2vw;
+    bottom: 10vh;
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+---------------------------------------------- PAGE CONTACT ------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+.contentContact {
+    display: block;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    right: 10%;
+    bottom: 5%;
+    display: grid;
+    grid-gap: 0;
+    grid-template: 1fr/repeat(20%);
+    z-index: 5;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0 0 0;
+    font-size: 1.5em;
+    font-family: signika, filson, verdana, sans-sérif;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 15px 15px 2px rgb(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+input,
+input[type="submit"],
+textarea {
+    position: relative;
+    top: 0;
+    font-size: 1.5em;
+    width: 78vw;
+    height: auto;
+    color: rgb(0, 0, 0);
+    background-color: rgb(236, 236, 236);
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 2px solid black;
+    margin: 0 2% 0 2%;
+    padding: 2%;
+    z-index: 6;
+}
+
+input:first-child {
+    margin-top: 0;
+}
+
+input[type="submit"] {
+    width: 100%;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.message_validation {
+    text-align: center;
+    color: blue;
+    padding-top: 2%;
+    font-family: signika, filson, verdana, sans-sérif;
+    font-size: 20px;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+---------------------------------------------- PAGE PROJET -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+div#projets {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: space-around;
+    justify-content: space-around;
+    width: 100%;
+    height: 85%;
+}
+
+span {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--cinq);
+    text-align: center;
+    font-size: 180%;
+    height: 25%;
+    width: 20%;
+}
+
+span:first-child {
+    background-color: var(--quatre);
+}
+
+span:nth-child(2) {
+    background-color: var(--une);
+}
+
+span:nth-child(3) {
+    background-color: var(--deux);
+}
+
+span:nth-child(4) {
+    background-color: var(--trois);
+}
+
+span:nth-child(5) {
+    background-color: var(--quatre);
+}
+
+span:nth-child(6) {
+    background-color: var(--trois);
+}
+
+span:nth-child(7) {
+    background-color: var(--une);
+}
+
+span:nth-child(8) {
+    background-color: var(--deux);
+}
+
+span:nth-child(9) {
+    background-color: var(--quatre);
+}
+
+span:nth-child(10) {
+    background-color: var(--trois);
+}
+
+span:nth-child(11) {
+    background-color: var(--deux);
+}
+
+span:nth-child(12) {
+    background-color: var(--une);
+}
+
+span:hover {
+    background-color: var(--cinq);
+    color: rgb(255, 255, 255);
+    background-blend-mode: difference;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+---------------------------------------------- PAGE PRESSE -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+.article {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 5%;
+    right: 0;
+    padding-bottom: 10%;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------ FOOTER ----------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#bandeau_git {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 94.5%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    text-align: center;
+    font-family: verdana, sans-sérif;
+    color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 0;
+}
+
+.github {
+    font-size: 100%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5%;
+    padding: 0 0.3% 0.3% 0.3%;
+    background-color: rgba(226, 222, 222, 0.95)
+}
+
+.github:hover {
+    font-size: 110%;
+    border-radius: 15%;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        top: 0;
+        height: 8%;
+    }
+    #content {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: space-between;
+        position: relative;
+        left: 0;
+        top: 5vh;
+        right: 0;
+        bottom: 5vh;
+        width: 100%;
+        height: 100vh;
+        padding-top: 10%;
+        text-align: justify;
+        z-index: 0;
+    }
+    span {
+        width: 48%;
+    }
+    h1 {
+        font-size: 1.5em;
+        line-height: 1.8em;
+    }
+    h2 {
+        font-size: 1.2em;
+        line-height: 1.4em;
+    }
+    h3 {
+        font-size: 1em;
+        line-height: 1.4em;
+        padding-bottom: 2%;
+    }
+    h3~a {
+        color: rgb(0, 0, 0);
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+    .video {
+        width: 100%;
+        height: auto;
+        padding: 0 10% 4% 10%;
+    }
+    .text {
+        width: 80%;
+        height: auto;
+        padding: 2.5% 10% 2% 10%;
+    }
+    .photo {
+        width: 60%;
+        height: auto;
+        padding: 2% 20% 2% 20%;
+        transition: 0.5s ease-in-out;
+    }
+    .photo:hover {
+        width: 90%;
+        height: auto;
+        padding: 6% 10% 6% 5%;
+    }
+    #bandeau_git {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 94.5%;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5%;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 80%;
+        text-align: center;
+        font-family: verdana, sans-sérif;
+        color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 0;
+    }
+}

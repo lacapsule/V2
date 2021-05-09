@@ -1,0 +1,417 @@
+/**********************************************************
+************************* GENERAL **************************
+**********************************************************/
+
+@keyframes blur {
+    0% {
+        background: linear-gradient(217deg, rgb(255, 255, 224), rgb(252, 243, 243) 70.71%), linear-gradient(127deg, rgba(255, 255, 255, .8), rgba(255, 255, 255, 255) 70.71%), linear-gradient(336deg, rgba(255, 255, 255, .8), rgba(255, 255, 255) 70.71%);
+    }
+    25% {
+        background-color: rgb(255, 255, 224);
+    }
+    50% {
+        background: linear-gradient(217deg, rgb(255, 255, 224), rgb(252, 243, 243) 70.71%), linear-gradient(127deg, rgba(255, 255, 255, .8), rgb(252, 243, 243) 70.71%), linear-gradient(336deg, rgba(255, 255, 255, .8), rgba(255, 255, 255) 70.71%);
+    }
+    75% {
+        background-color: rgb(255, 255, 224);
+    }
+    100% {
+        background: linear-gradient(217deg, rgb(230, 230, 230), rgb(252, 243, 243) 70.71%), linear-gradient(127deg, rgba(255, 249, 249, 0.8), rgb(252, 243, 243) 70.71%), linear-gradient(336deg, rgba(255, 255, 255, .8), rgba(255, 255, 255, 255) 70.71%);
+    }
+}
+
+
+/**********************************************************
+************************* HEADER **************************
+**********************************************************/
+
+
+/*********** APPARITION ET DISPARITION DU LOGO ***********/
+
+@-webkit-keyframes logocapsule {
+    0% {
+        opacity: 100%;
+    }
+    25% {
+        opacity: 98%;
+    }
+    28% {
+        opacity: 0;
+    }
+    77% {
+        opacity: 0;
+    }
+    78% {
+        opacity: 100%;
+    }
+    82% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 98%;
+    }
+}
+
+@keyframes logocapsule {
+    0% {
+        opacity: 100%;
+    }
+    25% {
+        opacity: 98%;
+    }
+    28% {
+        opacity: 0;
+    }
+    77% {
+        opacity: 0;
+    }
+    78% {
+        opacity: 100%;
+    }
+    82% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 98%;
+    }
+}
+
+
+/*********** APPARITION ET DISPARITION DU LOGO ***********/
+
+@-webkit-keyframes logoulamir {
+    0% {
+        opacity: 0;
+    }
+    29% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 100%;
+    }
+    48% {
+        opacity: 98%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    70% {
+        opacity: 98%;
+    }
+    75% {
+        opacity: 90%;
+    }
+    76% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes logoulamir {
+    0% {
+        opacity: 0;
+    }
+    29% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 100%;
+    }
+    48% {
+        opacity: 98%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    70% {
+        opacity: 98%;
+    }
+    75% {
+        opacity: 90%;
+    }
+    76% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/********** CHANNGEMENT COULEUR DE BANDEAU NOIR **********/
+
+@keyframes bandeau {
+    from {
+        color: rgba(226, 222, 222, 0.95);
+        background-color: rgba(43, 43, 43, 0.95);
+    }
+    25% {
+        color: rgba(251, 255, 6, 0.95);
+        background-color: rgba(70, 70, 70, 0.95);
+    }
+    60% {
+        color: rgba(251, 255, 6, 0.95);
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    to {
+        color: rgba(226, 222, 222, 0.95);
+        background-color: rgba(43, 43, 43, 0.95);
+    }
+}
+
+
+/*********** CHANNGEMENT ALTERNE DE BACKGROUND ***********/
+
+@keyframes bgcolor {
+    0% {
+        filter: invert(0);
+    }
+    50% {
+        filter: invert(0.1);
+    }
+    100% {
+        filter: invert(0);
+    }
+}
+
+
+/*********** CLIGNOTEMENT DE LA FLECHE DU MENU ***********/
+
+@keyframes flecheMenu {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+/**********************************************************
+************************** BODY ***************************
+**********************************************************/
+
+
+/*********** MOUVEMENT DE LA COULEUR DU TEXTE ***********/
+
+@-webkit-keyframes color {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 600vw;
+    }
+}
+
+@keyframes color {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 600vw;
+    }
+}
+
+
+/*************** CLIGNOTEMENT DE LA FLECHE ***************/
+
+@keyframes fleche {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/*********** APPARITION ET DISPARITION DU TEXTE ***********/
+
+@keyframes slideBody {
+    0% {
+        margin-top: 0;
+    }
+    9% {
+        margin-top: 0;
+    }
+    10% {
+        margin-top: -100%;
+    }
+    19% {
+        margin-top: -100%;
+    }
+    20% {
+        margin-top: -200%;
+    }
+    29% {
+        margin-top: -200%;
+    }
+    30% {
+        margin-top: -300%;
+    }
+    69% {
+        margin-top: -300%;
+    }
+    70% {
+        margin-top: -400%;
+    }
+    100% {
+        margin-top: -400%;
+    }
+}
+
+
+/**********************************************************
+*********************** PARTENAIRES ***********************
+**********************************************************/
+
+@keyframes slideTree {
+    0% {
+        margin-top: -300%;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+
+/**********************************************************
+************************* FOOTER **************************
+**********************************************************/
+
+@keyframes slideLogo {
+    0% {
+        margin-left: 0;
+    }
+    29% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: -105%;
+    }
+    31% {
+        margin-left: -105%;
+    }
+    49% {
+        margin-left: -105%;
+    }
+    50% {
+        margin-left: -105%;
+    }
+    51% {
+        margin-left: -150%;
+    }
+    69% {
+        margin-left: -150%;
+    }
+    70% {
+        margin-left: -150%;
+    }
+    71% {
+        margin-left: -150%;
+    }
+    99% {
+        margin-left: -150%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes slideLogoSmall {
+    0% {
+        margin-left: 0;
+    }
+    29% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: -95%;
+    }
+    31% {
+        margin-left: -95%;
+    }
+    49% {
+        margin-left: -95%;
+    }
+    50% {
+        margin-left: -195%;
+    }
+    51% {
+        margin-left: -195%;
+    }
+    69% {
+        margin-left: -195%;
+    }
+    70% {
+        margin-left: -280%;
+    }
+    71% {
+        margin-left: -280%;
+    }
+    99% {
+        margin-left: -280%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+
+/**********************************************************
+************************ NON USED *************************
+**********************************************************/
+
+@-webkit-keyframes slideImg {
+    0% {
+        background-image: url("../img/image2.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    40% {
+        background-image: url("../img/image1.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    80% {
+        background-image: url("../img/image0.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    100% {
+        background-image: url("../img/image2.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+}
+
+@keyframes slideImg {
+    0% {
+        background-image: url("../img/image2.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    40% {
+        background-image: url("../img/image1.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    80% {
+        background-image: url("../img/image0.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    100% {
+        background-image: url("../img/image2.jpeg");
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+}
