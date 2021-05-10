@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formateuse</title>
+    <meta name="description" content="La capsule est un chantier d'insertion numérique porté par l'ULAMIR-CPIE pays de Morlaix.">
+    <link rel="icon" type="image/png" href="../../../../img/lacapsule_favicon.png" />
+    <link rel="apple-touch-icon" href="../../../../img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../../../css/pages.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#"><img width="50px" class="capsule" src="../../../../img/capsule.png" alt="logo de la capsule" /></a>
+        <a href="#"><img width="50px" class="ulamir" src="../../../../img/ulamir.png" alt="logo de l'ULAMIR-CPIE Pays de Morlaix" /></a>
+        <div class="menu_container">
+            <a href="../../../../index.html" class="home">Accueil</a>
+            <a href="../../../../php.contact.php" id="contact">Contact</a>
+            <a href="../../../ressources.html" class="lien1">Ressources</a>
+            <a href="../../../activités.html" class="lien2">Activités</a>
+            <a href="../../../actualités.html" class="lien3">Actualités</a>
+        </div>
+    </header>
+
+    <div id="content">
+        <div class="video">
+            <video width="680px" autoplay="true" loop="true" intrinsicsize="true" preload="auto" muted="true">
+                <source src="video/video_formateuse.mp4" type="video/mp4">
+                <source src="video/video_formateuse.webm" type="video/webm">
+                    Il serait temps de mettre votre navigateur a jour ! 
+            </video>
+        </div>
+        <div class="text">
+            <h1 class="title">Projet</h1>
+            <h2> L’équipe a souhaité pouvoir effacer puis reformater les disques durs, directement chez les donateurs. Nous avons réfléchi à la conversion d'une armoire métallique de bureau. Nous avons donc modélisé ce meuble en 3D pour imaginer comment nous
+                allions l'utiliser. Nous avons décidé de réaliser ce projet en utilisant du matériel reconditionné/ de récupération. </h2>
+        </div>
+        <div class="photo">
+            <img width="680px" src="img/armoire_clonage.png" alt="">
+        </div>
+
+        <div class="text">
+            <h1 class="title">Prototypage</h1>
+            <h2>(par Mathieu Cadran)</h2>
+            <h2> Dès lors, je me suis positionné sur le projet, étant passionné de hardware. Le principal problème que j'ai rencontré fut le risque de surchauffe, dû au confinement des composants. Pour pallier à ce problème, un test a consisté à faire un certain
+                nombre de clonages avec les tours d'origine, positionnées dans le meuble. Une centaine de disques ont été clonés en 1 mois dans ces conditions, et en utilisation, nous avons un delta T de 10°c. (différence de chaleur entre la température
+                extérieure et intérieure, en l’occurrence, 10 degrés de plus à l'intérieur.)</h2>
+
+        </div>
+
+
+
+        <div class="photo">
+            <img width="680px" src="img/armoire_clonage2.png" alt="">
+        </div>
+
+        <div class="text">
+            <h1 class="title">Réalisation</h1>
+            <h2> Étape 1: </h2>
+            <p> L’ossature interne qui supportera le tout.</p>
+
+            <h3> J'ai utilisé des rails de placo coupés en 2 dimensions distinctes, utilisant les chutes pour créer des cales. J'ai donc créé 9 emplacements réservés :</h3><br>
+            <h2>
+                <h3> - 3 pour les cartes mères. </h3>
+                <h3> - 3 pour les blocs d'alimentation.</h3>
+                <h3> - 3 pour les disques durs.</h3>
+            </h2>
+            <h2>Pour éviter les risques de court-circuit entre les soudures des cartes mères et les rails de placo, j’ai fixé des morceaux de mousse isolante entre ceux-ci.</h2>
+            <h2>
+                <h2> Étape 2: </h2>
+                <p>Ergonomie.</p>
+                <h3> Afin d'éviter tout contact avec l'intérieur du meuble, le bouton d'alimentation, les témoins, ainsi que les branchement USB et SATA ont été prolongés pour permettre leur usage à l'extérieur de l'armoire. </h3>
+            </h2>
+            <h2>
+                <h2> Étape 3: </h2>
+                <p>Positionnement des écrans.</p>
+                <h3> Je suis parti sur un système de pieds fait maison, composés de rails de placo et chevrons de bois. Ceci permet une bonne rigidité, une fixation sur l'arrière de l’armoire et de les enlever au besoin.
+                </h3>
+            </h2>
+            <h2>
+                <h2> Étape 4: </h2>
+                <p> Les possibilités d'utilisations.</p>
+                <h3> Une fois finie, l'armoire peut permettre plusieurs types d'usages :</h3>
+                <h3> - La réparation de disques durs. (DOSFSCK/CHKDSK)</h3>
+                <h3> - Le clonage de disques ou de partitions simultanément. (CLONEZILLA/DD)</h3>
+                <h3> - La purge de disques par réécriture. (DBAN/SHRED) </h3>
+                <h3>- La récupération de données. (TESTDISK) </h3>
+            </h2>
+        </div>
+        <div class="photo">
+            <img width="680px" src="img/capture_clonage.png" alt="">
+        </div>
+        <div class="text">
+            <h1 class="title">Contraintes</h1>
+            <h2>Suite à ce test, je me suis rendu compte que la surchauffe provenait principalement des disques durs et de la conductivité électrique de l'armoire, pouvant endommager les cartes mères une fois sorties de leurs boîtiers.</h2>
+        </div>
+
+    </div>
+    <span id="bandeau_git">Code source en libre accès sur &nbsp; <a class="github" href="https://github.com/lacapsule/lacapsule"> github </a> &nbsp; sous license GPL.</span>
+
+</body>
+
+</html>
