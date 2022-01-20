@@ -19,9 +19,39 @@ body {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     font-family: signika, filson, verdana, sans-sérif;
     z-index: 0;
+}
+
+#contact {
+    background-color: var(--deux);
+}
+
+#ressources {
+    background-color: var(--trois);
+}
+
+video.bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    min-height: 140%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    background-size: cover;
+}
+
+#activites {
+    background-color: var(--une);
+}
+
+#actualites {
+    background-color: var(--quatre);
 }
 
 header {
@@ -49,7 +79,7 @@ header {
     justify-content: space-between;
     position: relative;
     left: 0;
-    top: 0;
+    top: 12%;
     right: 0;
     bottom: 8vh;
     width: 100%;
@@ -65,8 +95,19 @@ header {
     justify-content: center;
     width: 800%;
     height: auto;
-    padding: 0 10% 4% 10%;
-    background: linear-gradient(#1a9445, #1ab3a9);
+    padding: 4% 10% 4% 10%;
+    background: #000000;
+}
+
+.video_dylan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800%;
+    height: 100%;
+    padding: 5% 10% 6% 10%;
+    overflow: visible;
+    background: #000000;
 }
 
 .text {
@@ -78,6 +119,26 @@ header {
     height: auto;
     padding: 2.5% 22% 2% 22%;
     background: linear-gradient(#ffffff, #ecfffe);
+}
+
+.tuto {
+    display: flex;
+    align-items: space-around;
+    justify-items: space-around;
+    justify-content: center;
+    background-color:rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+}
+
+a.tuto {
+    padding-top: 10%;
+    color: rgb(163, 151, 228);
+}
+
+a.tuto:hover {
+    color: rgb(217, 255, 0);
 }
 
 .text:last-child {
@@ -94,9 +155,24 @@ header {
     width: 60%;
     height: auto;
     padding: 2% 20% 2% 20%;
-    background: linear-gradient(#2ca0d6, #1a9445);
+    background: rgb(19, 19, 19);
 }
 
+img {
+    align-self: center;
+}
+
+.photo_blanc {
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+    align-content: center;
+    justify-items: center;
+    justify-self: center;
+    width: 50%;
+    height: auto;
+    background-color: white;
+}
 
 /*----------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
@@ -116,15 +192,15 @@ a {
     text-decoration: none;
 }
 
+.inner {
+    color: rgb(40, 25, 121);
+    text-decoration: none;
+}
+
 h1 {
     font-size: 2.5em;
     line-height: 2.5em;
-    background: -o-repeating-linear-gradient(135deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-    background-size: 600vw 600vw;
-    -webkit-animation: "color" 10s infinite linear forwards;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: rgb(40, 25, 121);
 }
 
 h2 {
@@ -197,11 +273,11 @@ div#maintenance {
 
 .contentContact {
     display: block;
-    width: 50vw;
-    height: 50vh;
+    width: 80%;
+    height: 70vh;
     position: absolute;
     left: 10%;
-    top: 20%;
+    top: 15%;
     right: 10%;
     bottom: 5%;
     display: grid;
@@ -220,7 +296,8 @@ form {
     font-family: signika, filson, verdana, sans-sérif;
     text-align: center;
     color: white;
-    background-color: rgb(0, 0, 0);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     box-shadow: 2px 15px 15px 2px rgb(0, 0, 0, 0.5);
     transition: 0.5s ease;
 }
@@ -230,16 +307,29 @@ input[type="submit"],
 textarea {
     position: relative;
     top: 0;
-    font-size: 1.5em;
-    width: 78vw;
+    font-size: 1em;
+    width: 90%;
     height: auto;
     color: rgb(0, 0, 0);
     background-color: rgb(236, 236, 236);
     border: 2px solid rgb(148, 148, 148);
-    border-radius: 2px solid black;
-    margin: 0 2% 0 2%;
+    border-radius: 2px solid rgba(0, 0, 0, 0.9);
+    font-family: signika, filson, verdana, sans-sérif;
+    margin: 0 4% 0 4%;
     padding: 2%;
     z-index: 6;
+}
+
+textarea {
+    height: 30%;
+}
+
+input:hover,
+input[type="submit"]:hover,
+textarea:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(236, 236, 236);
 }
 
 input:first-child {
@@ -248,11 +338,6 @@ input:first-child {
 
 input[type="submit"] {
     width: 100%;
-}
-
-.button:hover {
-    cursor: pointer;
-    color: blue;
 }
 
 .message_validation {
@@ -408,6 +493,13 @@ span:hover {
     border-radius: 15%;
 }
 
+
+/*----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------ MEDIA -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
 @media screen and (max-width: 1024px) {
     header {
         top: 0;
@@ -426,9 +518,9 @@ span:hover {
         right: 0;
         bottom: 5vh;
         width: 100%;
-        height: 100vh;
-        padding-top: 10%;
+        height: 80vh;
         text-align: justify;
+        overflow-x: hidden;
         z-index: 0;
     }
     span {
@@ -458,7 +550,19 @@ span:hover {
     .video {
         width: 100%;
         height: auto;
-        padding: 0 10% 4% 10%;
+        padding: 8% 10% 4% 10%;
+    }
+    .video_dylan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: auto;
+        transform: scale(0.56);
+        padding: 60% 50% 60% 50%;
+        margin: -10% 50% -2% 50%;
+        overflow: hidden;
+        background: #000000;
     }
     .text {
         width: 80%;
@@ -466,6 +570,12 @@ span:hover {
         padding: 2.5% 10% 2% 10%;
     }
     .photo {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
         width: 60%;
         height: auto;
         padding: 2% 20% 2% 20%;
@@ -494,5 +604,22 @@ span:hover {
         color: rgba(255, 255, 255, 0.95);
         background-color: rgba(0, 0, 0, 0.95);
         z-index: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        top: 0;
+        height: 6%;
+    }
+}
+
+@media screen and (max-height: 560px) {
+    header {
+        top: 0;
+        height: 4em;
+    }
+    #bandeau_git {
+        height: 5%;
     }
 }

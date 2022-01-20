@@ -1,0 +1,6 @@
+# Group 1
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+
+Sitemap: http://www.lacapsule.org/sitemap.xml

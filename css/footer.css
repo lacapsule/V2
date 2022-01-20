@@ -11,35 +11,31 @@ footer {
     align-items: center;
     align-self: flex-end;
     width: 250%;
-    height: 8%;
+    height: 9%;
     animation: 25s slideLogo infinite;
     background-color: rgb(252, 246, 255);
-    border-top: solid 5px rgb(234, 255, 236);
     overflow: hidden;
     z-index: 10;
 }
 
 footer:hover {
     background-color: rgb(255, 255, 255);
-    border-top: solid 5px rgb(255, 255, 255);
     transition: ease-in-out 0.2s;
     overflow: hidden;
     z-index: 1;
 }
 
 footer img {
-    width: 3em;
+    width: 4.5em;
     height: auto;
-    margin-left: 0.6em;
+    margin-left: 4em;
     z-index: 3;
 }
 
 footer img:hover {
-    width: 3.2em;
-    height: auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0.2em;
+    width: 3em;
+    height: 3em;
+    padding: 10% 0 -1% 0;
     margin-left: 0.6em;
     filter: contrast(200%);
     z-index: 4;
@@ -89,16 +85,16 @@ footer img:hover {
     }
     footer img {
         width: 3.2em;
-        height: auto;
+        height: 3.2em;
+margin-left: 1em;
         z-index: 3;
     }
     footer img:hover {
         width: 3.4em;
-        height: auto;
+        height: 3.4em;
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0.2em;
-        margin-left: 0.6em;
         filter: contrast(200%);
         z-index: 6;
     }
@@ -120,5 +116,56 @@ footer img:hover {
         color: rgba(255, 255, 255, 0.95);
         background-color: rgba(0, 0, 0, 0.95);
         z-index: 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #bandeau_git {
+        align-self: flex-end;
+        display: flex;
+        width: 100%;
+        height: 5%;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 80%;
+        text-align: center;
+        font-family: verdana, sans-sérif;
+        color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #bandeau_git {
+        align-self: flex-end;
+        display: flex;
+        height: 5%;
+        top: 84vh;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 80%;
+        text-align: center;
+        font-family: verdana, sans-sérif;
+        color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 0;
+    }
+    footer {
+        top: 90%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #bandeau_git {
+        top: 94.55vh;
+        bottom: 0;
+        height: 2em;
+    }
+    footer {
+        top: 83vh;
+        height: 4em;
     }
 }

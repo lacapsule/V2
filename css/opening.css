@@ -3,8 +3,8 @@
     @import 'animations.css';
     @import 'footer.css';
     @font-face {
-        font-family: "Signika";
-        src: url('../fonts/Signika-Bold.ttf');
+        font-family: "Signika-Bold";
+        src: url('Signika-Bold.ttf');
     }
     
     body {
@@ -28,19 +28,13 @@
     h4,
     p {
         text-align: center;
-        font-family: Signika, verdana, sans-sérif;
+        font-family: Signika-Bold, verdana, sans-sérif;
         color: rgba(0, 0, 0, 0.95);
         line-height: 1.2em;
     }
     
     h1 {
-        font-size: 300%;
-        background: -o-repeating-linear-gradient(135deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-        background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-        background-size: 600vw 600vw;
-        -webkit-animation: "color" 15s infinite linear forwards, "intro" 60s infinite linear forwards;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        font-size: 3em;
     }
     
     h2#fleche {
@@ -50,16 +44,16 @@
     }
     
     h2 {
-        font-size: 250%;
+        font-size: 3em;
     }
     
     h3 {
-        font-size: 200%;
+        font-size: 2em;
     }
     
     p {
         text-align: justify;
-        font-size: 200%;
+        font-size: 2em;
         padding: 0 10% 10% 10%;
     }
     /**********************************************************
@@ -68,8 +62,8 @@
     
     #container {
         display: grid;
-        grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6";
-        grid-template-rows: 100% 100% 100% 100% 100% 100%;
+        grid-template-areas: "item1" "item2" "item3" "item4" "item5";
+        grid-template-rows: 100% 100% 100% 100% 100%;
         grid-template-columns: 100%;
         align-items: center;
         justify-items: center;
@@ -110,39 +104,38 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        padding-top: 5%;
-        background: linear-gradient(#1a9445, #1ab3a9);
+    }
+    
+    svg {
+        padding-top: 2%;
+        width: 5%;
+        height: auto;
+        animation: 1s ease-in-out fleche infinite;
     }
     
     .item2 {
         grid-area: item2;
-        padding: 0 20% 0 20%;
-        background: linear-gradient(#190a50, #30098b);
+        padding: 0 20% 0% 20%;
+        width: 100%;
+        background-color: #2479e9;
     }
     
     .item3 {
         grid-area: item3;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#2ca0d6, #1a9445);
+        padding: 0 20% 0 20%;
+        background: linear-gradient(#000000, #585858);
     }
     
     .item4 {
         grid-area: item4;
-        padding: 0 20% 20% 20%;
-        background-color: #2479e9;
+        width: 100%;
+        height: auto;
     }
     
     .item5 {
         grid-area: item5;
-        padding: 0 20% 20% 20%;
-        background: linear-gradient(#000000, #585858);
-    }
-    
-    .item6 {
-        grid-area: item6;
-        align-self: flex-end;
-        justify-self: flex-end;
+        padding: 0 20% 0 20%;
+        background: linear-gradient(#190a50, #30098b);
     }
     
     @media screen and (max-width: 1024px) {
@@ -152,21 +145,15 @@
         h4,
         p {
             text-align: center;
-            font-family: Signika, verdana, sans-sérif;
+            font-family: Signika-Bold, verdana, sans-sérif;
             color: rgba(0, 0, 0, 0.95);
             line-height: 1.2em;
         }
         h1 {
-            font-size: 200%;
-            background: -o-repeating-linear-gradient(135deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-            background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-            background-size: 600vw 600vw;
-            -webkit-animation: "color" 15s infinite linear forwards, "intro" 60s infinite linear forwards;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
+            font-size: 1.7em;
         }
         h2 {
-            font-size: 180%;
+            font-size: 1.3em;
         }
         h2#fleche {
             font-size: 3em;
@@ -182,8 +169,8 @@
         }
         #container {
             display: grid;
-            grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6";
-            grid-template-rows: 100% 100% 100% 100% 100% 100%;
+            grid-template-areas: "item1" "item2" "item3" "item4" "item5";
+            grid-template-rows: 100% 100% 100% 100% 100%;
             grid-template-columns: 100%;
             align-items: center;
             justify-items: center;
@@ -196,7 +183,7 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             z-index: 0;
         }
         div {
@@ -241,17 +228,42 @@
         }
         .item5 {
             grid-area: item5;
-            padding: 0 20% 20% 20%;
+            padding: 0 20% 0 20%;
             background: linear-gradient(#000000, #585858);
-        }
-        .item6 {
-            grid-area: item6;
-            align-self: flex-end;
-            justify-self: flex-end;
         }
     }
     
-    @media screen and (max-height: 650px) {
+    @media screen and (max-height: 450px) {
+        .item1 {
+            grid-area: item1;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            background: linear-gradient(#1a9445, #1ab3a9);
+        }
+        .item2 {
+            grid-area: item2;
+            height: 100%;
+            padding: 0 20% 0 20%;
+            background: linear-gradient(#190a50, #30098b);
+        }
+        .item3 {
+            grid-area: item3;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#2ca0d6, #1a9445);
+        }
+        .item4 {
+            grid-area: item4;
+            padding: 0 20% 20% 20%;
+            background-color: #2479e9;
+        }
+        .item5 {
+            grid-area: item5;
+            padding: 0 20% 0 20%;
+            background: linear-gradient(#000000, #585858);
+        }
         img.map {
             padding: 2% 20% 12% 20%;
             height: 90%;

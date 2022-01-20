@@ -12,12 +12,21 @@ header {
     top: 0;
     right: 0;
     width: 100%;
-    height: 8%;
+    height: 8.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    background: linear-gradient(to right, #fffefe, 50%, transparent);
+    background-color: white;
     z-index: 1;
 }
 
@@ -25,7 +34,9 @@ header:hover {
     background-color: white;
 }
 
-img:not(#contact, #burger) {
+img {
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     margin-left: 1em;
     z-index: 6;
@@ -33,15 +44,20 @@ img:not(#contact, #burger) {
 
 img:hover:not(#partenaires) {
     opacity: 90%;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
+    -webkit-transition: ease-in-out 0.5s;
+    -o-transition: ease-in-out 0.5s;
     transition: ease-in-out 0.5s;
 }
 
 img.capsule {
     position: relative;
-    width: auto;
-    height: 2.6em;
+    width: 2em;
+    height: auto;
     padding-top: 2%;
+    -webkit-animation: 20s logocapsule infinite;
     animation: 20s logocapsule infinite;
     z-index: 1;
 }
@@ -49,9 +65,10 @@ img.capsule {
 img.ulamir {
     position: absolute;
     left: 0;
-    top: 10%;
-    width: auto;
-    height: 2.6em;
+    top: 5%;
+    width: 2em;
+    height: auto;
+    -webkit-animation: 20s logoulamir infinite;
     animation: 20s logoulamir infinite;
     z-index: 2;
 }
@@ -62,9 +79,18 @@ div.menu_container {
     top: 0;
     right: 0;
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     width: 100%;
     height: 100%;
@@ -72,9 +98,18 @@ div.menu_container {
 }
 
 header>div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 18%;
     height: 100%;
@@ -82,6 +117,8 @@ header>div a {
     font-size: 80%;
     font-family: signika, verdana, sans-sérif;
     color: white;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
     transition: 0.5s ease;
     opacity: 99%;
     z-index: 5;
@@ -89,26 +126,31 @@ header>div a {
 
 a.home {
     background-color: var(--une);
+    -webkit-animation: 10s ease-in-out bgcolor infinite;
     animation: 10s ease-in-out bgcolor infinite;
 }
 
 a#contact {
     background-color: var(--deux);
+    -webkit-animation: 11s ease-in-out bgcolor infinite;
     animation: 11s ease-in-out bgcolor infinite;
 }
 
 a.lien1 {
     background-color: var(--trois);
+    -webkit-animation: 12s ease-in-out bgcolor infinite;
     animation: 12s ease-in-out bgcolor infinite;
 }
 
 a.lien2 {
     background-color: var(--une);
+    -webkit-animation: 13s ease-in-out bgcolor infinite;
     animation: 13s ease-in-out bgcolor infinite;
 }
 
 a.lien3 {
     background-color: var(--quatre);
+    -webkit-animation: 14s ease-in-out bgcolor infinite;
     animation: 14s ease-in-out bgcolor infinite;
 }
 
@@ -121,4 +163,30 @@ a.lien3 {
     color: rgb(255, 255, 255);
     background-blend-mode: difference;
     opacity: 100%;
+}
+
+@media screen and (max-width: 450px) {
+    header>div a {
+        font-size: 60%;
+    }
+    header {
+        height: 6%;
+    }
+    img.ulamir {
+        position: absolute;
+        left: 0;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    header>div a {
+        font-size: 80%;
+    }
+    header {
+        height: 3em;
+    }
+    img.ulamir {
+        position: absolute;
+        left: 0;
+    }
 }

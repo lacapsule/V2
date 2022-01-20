@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Logiciel GdS4</title>
+    <meta name="description" content="Guide d'utilisation GdS4 par Brivael Fer">
+    <link rel="icon" type="image/png" href="../../../../../img/lacapsule_favicon.png" />
+    <link rel="apple-touch-icon" href="../../../../../img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../../../../css/pages.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#"><img width="50px" loading="lazy" class="capsule" src="../../../../../img/capsule.png" alt="logo de la capsule" /></a>
+        <a href="#"><img width="50px" loading="lazy" class="ulamir" src="../../../../../img/ulamir.png" alt="logo de l'ULAMIR-CPIE Pays de Morlaix" /></a>
+        <div class="menu_container">
+            <a href="../../../../../index.html" class="home">Accueil</a>
+            <a href="../../../../../php/contact.php" id="contact">Contact</a>
+            <a href="../../../../ressources.html" class="lien1">Ressources</a>
+            <a href="../../../../activités.html" class="lien2">Activités</a>
+            <a href="../../../../actualités.html" class="lien3">Actualités</a>
+        </div>
+    </header>
+    <div id="content">
+        <div class="text">
+            <h1 class="title">GdS4 Guide d’utilisation</h1>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_1.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h2>Condition D'utilisation</h2>
+            <h3>GdS4 est un logiciel de gestion de stock destiner au chantier d’insertion. Pour l’utilise il est nécessaire d’installer les framework .Net et d’être sous Windows (le logiciel a été développé pour Windows 10, je ne l’ai pas test sous un autre système d’exploitation). De plus, il nécessite un serveurs MySQL pour fonctionner, je vous conseille donc de télécharger WampServer</h3>
+            <br>
+            <h2>Créer une base de donnée</h2>
+            <h3>Avant de pouvoir utiliser le logiciel vous devez créer une base de données. Vous pouvez lui donne le nom que vous voulez ce ne sera pas gênant, mais sachez que par défaut il cherchera une base de données nommée « stock ». Notez que vous ne pourrez pas mettre de majuscule au nom de la base de données.</h3>
+            <h3>Pour créer une base de données commencer par installer WampServer puis lancer le, l’icône de Wamp devrai apparaître en bas à droite, si ce n’est pas le cas cliquer sur la flèche pour faire apparaître les icônes cachés.</h3>
+            <h3>Cliquer sur l’icône, puis sur phpmyadmin. Cela ouvrira le serveur dans un navigateur internet. Il vous demandera vous identifier écrivez « root » dans le nom utilisateur, laissez le mots de passe blanc, et selection « MySQL » dans choix du serveur. Si vous voulez mettre un mot de passe laisse trouver comment faire sur internet ce n’est pas très utile en locale.</h3>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_2.png" loading="lazy" alt="">
+        </div>
+        <br>
+        <div class="text">
+            <h3>Vous devriez arriver sur la page phpMyAdmin.</h3>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_3.png" loading="lazy" alt="">
+        </div>
+        <br>
+        <div class="text">
+            <h3>Cliquez sur nouvelle base de données, remplacez « latin1_swedish_ci » par « utf8_general_ci », nommez la base de données puis cliquez sur créer.</h3>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_4.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h3>Vérifiez que la base de données apparaît dans la liste à droite. À partir de là vous pourrez gérer la base de données depuis la logiciel.</h3>
+            <br>
+            <h2>Le Fonctionnement du logiciel</h2>
+            <h3>Voici comment se découpe la fenêtre principale :</h3>
+            <ol>
+                <li>Cette partie de la fenêtre contient les fonctionnalitées principales du logiciel : l’ajout, suppression et la recherche d’appareil dans les tables.</li>
+                <li>Celle-ci sert à copier ou transférer des données d’une table à une autre.</li>
+                <li>Ce bouton sert à ouvrir la fenêtre de paramètre.</li>
+                <li>Ici vous controllez l’affichage du tableau.</li>
+                <li>Le tableau, vous pouvez double clique sur les numéro de série pour les sélectionner.</li>
+                <li>Permet de créer un fichier CSV(tableur) de la table afficher.</li>
+            </ol>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_5.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h2>Les fonctions principales (1)</h2>
+            <h3>- Dans « Table principal » vous sélectionnez la table dans la quelle vous souhaitez ajouter, supprimer ou rechercher une entrée.</h3>
+            <h3>- « N/S » est le champ où vous entrez les numéros de séries. En cliquant sur le bouton « Rechercher » qui se trouve à côté, vous lancerez dans la table principale une recherche du numéro de série entrée. Si le numéro y est déjà tous les champ seront automatiquement remplis.</h3>
+            <h3>- Dans « Marque » vous sélectionnez la marque de l’appareil, les choix du champ Modèle dépendent de ce champ.</h3>
+            <h3>- Dans « Modèle » vous sélectionnez le modèle l’appareil.</h3>
+            <h3>- Le bouton « Ajouter » sert à ajouter une entrée dans la table sélectionner, le programme vérifiera que le  numéro de série n’est pas déjà dans la table avant de l’ajouter. Le bouton se verrouille quand vous lancez une recherche et se déverrouille quand vous modifier le numéro de série.</h3>
+            <h3>- Le bouton « Supprimer » sert à supprimer une entrée de la table sélectionner, il n’est cliquable que si vous avez recherché le numéro de série ou si vous l’avez sélectionnée depuis le tableau.</h3>
+            <h2>Copie et transfère(2)</h2>
+            <h3>- « Table de copie » indique la table dans la copier/transférer la/les entrée de la « Table principal ».</h3>
+            <h3>- « Copie/Transfère de table » sert à choisir si vous allez copier/transférer une seule entrée où toutes les entrées de la table principale. Si il est coché, les action se feront sur une table entière.</h3>
+            <h3>- Le bouton « Copier » sert à lancer la copie. Il n’est cliquable qu’après une recherche, que vous ayez sélectionnée une entrée dans le tableau ou si « Copie/Transfère de table » est coché. Dans ce dernier cas il copiera entièrement la « Table principal » dans la « Table de copie ». Si un numéro de série est déjà présent dans la « Table de copie » l’entrée correspondante ne sera pas copiée.</h3>
+            <h3>- Le bouton « Transférer » fait la même chose que le bouton « Copie » en effaçant en plus les entrées de la table principale. <strong>Attention</strong> si « Copie/Transfère de table » est coché il effacera entièrement les données de la « Table principal »</h3>
+            <h2>Le tableau et son gestionnaire d’affichage(4 et 5)</h2>
+            <h3>- Le tableau afficher les entrée de la table sélection dans le champ en haut à gauche de celui-ci. Si vous double cliquez sur un numéro de série, le programme remplira automatiquement « N/S » et recherchera le numéro cliqué dans la « Table principal », un message s’affichera si le  numéro n’est pas trouvé.</h3>
+            <h3>- « Synchroniser avec Table principal » permet de synchroniser l’affichage du tableau avec « Table principal », si il est coché modifier l’un modifiera l’autre.</h3>
+            <h3>- Le compteur « Nombre d’entrée » indique le nombre d’entrée dans la table afficher.</h3>
+            <h3>- « Afficher tous » si coché affiche toutes les entrées de la table afficher, dans le cas contraire seul les 9 dernières entrées seront affichées.</h3>
+            <h2>La fenêtre paramètre</h2>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_6.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h3>La fenêtre de paramètres sert à configurer la connexion, à ajouter des marque et des modèle, et à gérer les tables.</h3>
+        </div>
+        <div class="photo">
+            <img width="60%" src="img/Guide/Image_7.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h3>Si vous avez installé Wamp et créé une base de donnée en suivant mes instructions,  vous ne devriez pas avoir à changer autre chose que le nom de la base de données. Faisons en tout de même le tour.</h3>
+            <h3>- Adresse serveur : contient l’adresse IP du serveurs utilisé, si ce serveur est sur votre ordinateur(comme ça devrai être le cas pour vous), vous pouvez aussi écrire « localhost ».</h3>
+            <h3>- UID : est l’identifiant utilisateur (par défaut WampServer vous donnera « root »).</h3>
+            <h3>- Mots de passe : le mot de passe lié à votre identifiant utilisateur( est vide par défaut sur  pour « root »).</h3>
+            <h3>- Base de données : contiens le nom de la base de données avec laquelle vous travaillez (par défaut le logiciel utilisera « stock » si vous avez nommé votre base de données autrement changez le par le nom de votre base de données).</h3>
+            <h3>- Port : contiens le numéro de port de connexion ouvre (par défaut votre ordinateur utilisera le port « 3306 »)</h3>
+            <h2>Gestion de Table</h2>
+        </div>
+        <div class="photo">
+            <img width="80%" src="img/Guide/Image_8.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h3>Gestion de Table sert a ajouter, supprimer et vider des tables de votre base de données.</h3>
+            <h3>- Le champ de gauche et le bouton « Ajouter » servent à créer de nouvelle table dans la base de données.</h3>
+            <h3>- Le champ  à droite permet de choisir la table sur la quelle les bouton « Sélectionner », « Vider » et « Supprimer table ».</h3>
+            <h3>- Le bouton « Sélectionner » permet de choisir la table que le logiciel utilisera par défaut.</h3>
+            <h3>- Le bouton « Vider » sert à effacer les données de la table indiquée dans le champ à droite.</h3>
+            <h3>- Le bouton « Supprimer » permet d’effacer une table.</h3>
+            <h2>Ajout de marque</h2>
+            <h3>Ajout de marque permet d’ajouter des marque à la liste. Entrer simplement le nom de la marque et cliquer sur « Ajouter Marque ».</h3>
+        </div>
+        <div class="photo">
+            <img width="60%" src="img/Guide/Image_9.png" loading="lazy" alt="">
+        </div>
+        <div class="text">
+            <h2>Ajout de modèle</h2>
+            <h3>Ajout de modèle permet d’ajouter de modèle à la liste. Les modèles son liés à des marques, vous devez choisir une marque avant de pouvoir entrer le modèle. Une fois le modèle entré cliquez sur « Ajouter Modèle ».</h3>
+        </div>
+        <div class="photo">
+            <img width="60%" src="img/Guide/Image_10.png" loading="lazy" alt="">
+        </div>
+    </div>
+    <span id="bandeau_git">Code source en libre accès sur &nbsp; <a class="github" href="https://github.com/lacapsule"> github </a> &nbsp; sous license GPL.</span>
+</body>
+
+</html>
