@@ -11,7 +11,8 @@ footer {
     align-items: center;
     align-self: flex-end;
     width: 250%;
-    height: 9%;
+    height: 10%;
+    padding-top: 1em 0 0 1em;
     animation: 25s slideLogo infinite;
     background-color: rgb(252, 246, 255);
     overflow: hidden;
@@ -26,7 +27,7 @@ footer:hover {
 }
 
 footer img {
-    width: 4.5em;
+    width: 4em;
     height: auto;
     margin-left: 4em;
     z-index: 3;
@@ -45,17 +46,17 @@ footer img:hover {
     display: flex;
     position: absolute;
     left: 0;
-    top: 78.5%;
+    top: 78.6%;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 5%;
+    height: 5.5%;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     font-size: 100%;
     text-align: center;
-    font-family: verdana, sans-sérif;
+    font-family:Roboto,Arial,sans-serif;
     color: rgba(255, 255, 255, 0.95);
     background-color: rgba(0, 0, 0, 0.95);
     z-index: 0;
